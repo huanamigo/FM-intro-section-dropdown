@@ -10,37 +10,70 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="/styles/styleMobile.css" />
+    <script src="/scripts/script.js" defer></script>
 
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
   </head>
   <body>
+    <div class="hamb-menu-bg"></div>
     <div class="hamb-menu">
       <div class="features">
-        <p>Features</p>
         <div>
           <ul>
-            <li>Todo List</li>
-            <li>Calendar</li>
-            <li>Reminders</li>
-            <li>Planning</li>
+            <li>
+              <p class="features-btn">
+                Features
+                <img src="./images/icon-arrow-up.svg" />
+                <img src="/images/icon-arrow-down.svg" />
+              </p>
+            </li>
+            <ul class="features-list">
+              <li><img src="/images/icon-todo.svg" />Todo List</li>
+              <li><img src="/images/icon-calendar.svg" />Calendar</li>
+              <li><img src="/images/icon-reminders.svg" />Reminders</li>
+              <li><img src="/images/icon-planning.svg" />Planning</li>
+            </ul>
           </ul>
         </div>
       </div>
-      <div class="company">
-        <p>Company</p>
 
+      <div class="company">
+        <div>
+          <ul>
+            <li>
+              <p class="company-btn">
+                Company
+                <img src="./images/icon-arrow-up.svg" />
+                <img src="/images/icon-arrow-down.svg" />
+              </p>
+            </li>
+            <ul class="company-list">
+              <li>History</li>
+              <li>Our Team</li>
+              <li>Blog</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+
+      <div class="careers">
         <ul>
-          <li>History</li>
-          <li>Our Team</li>
-          <li>Blog</li>
+          <li>
+            <p>Careers</p>
+          </li>
         </ul>
       </div>
-      <div class="careers"><p>Careers</p></div>
-      <div class="about"><p>About</p></div>
+
+      <div class="about">
+        <ul>
+          <li>
+            <p>About</p>
+          </li>
+        </ul>
+      </div>
 
       <div class="login"></div>
     </div>
-
     <nav>
       <a href="#"><img src="/images/logo.svg" alt="logo" /></a>
       <button class="hamb"></button>
