@@ -44,6 +44,7 @@ nav {
 
 .hamb-menu {
   color: $MediumGray;
+  font-size: larger;
   margin: 0;
   padding: 70px 0;
   position: fixed;
@@ -57,8 +58,26 @@ nav {
     list-style-type: none;
   }
 
+  div {
+    height: 20px;
+  }
+
   .features-list,
   .company-list {
+    transition: 0.2s ease-in-out;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+
+    & > li {
+      margin-top: 10px;
+      img {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .arrow-up {
     display: none;
   }
 }

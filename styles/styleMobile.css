@@ -38,6 +38,7 @@ nav .hamb {
 
 .hamb-menu {
   color: hsl(0deg, 0%, 41%);
+  font-size: larger;
   margin: 0;
   padding: 70px 0;
   position: fixed;
@@ -50,8 +51,25 @@ nav .hamb {
 .hamb-menu li {
   list-style-type: none;
 }
+.hamb-menu div {
+  height: 20px;
+}
 .hamb-menu .features-list,
 .hamb-menu .company-list {
+  transition: 0.2s ease-in-out;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+.hamb-menu .features-list > li,
+.hamb-menu .company-list > li {
+  margin-top: 10px;
+}
+.hamb-menu .features-list > li img,
+.hamb-menu .company-list > li img {
+  margin-right: 10px;
+}
+.hamb-menu .arrow-up {
   display: none;
 }
 
