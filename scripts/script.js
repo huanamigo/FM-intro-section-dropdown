@@ -4,9 +4,23 @@ const companyBtn = document.querySelector(".company-btn");
 const companyEl = document.querySelector(".company-list");
 const arrowsUp = document.querySelectorAll(".arrow-up");
 const arrowsDown = document.querySelectorAll(".arrow-down");
+const hambMenuBg = document.querySelector(".hamb-menu-bg");
+const hambMenu = document.querySelector(".hamb-menu");
+const hamb = document.querySelector(".hamb");
 
 featuresBtn.addEventListener("click", showFeatures);
 companyBtn.addEventListener("click", showCompany);
+hamb.addEventListener("click", showHamb);
+
+function showHamb() {
+  if (hambMenu.style.opacity == 1) {
+    hambMenu.style.opacity = 0;
+    hambMenuBg.style.opacity = 0;
+  } else {
+    hambMenu.style.opacity = 1;
+    hambMenuBg.style.opacity = "0.7";
+  }
+}
 
 function showFeatures() {
   if (featuresEl.style.opacity != 0) {

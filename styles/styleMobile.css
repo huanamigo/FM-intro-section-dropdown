@@ -7,6 +7,15 @@ body {
   font-family: "Epilogue", sans-serif;
   margin: 0;
   padding: 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: min(100%, 1140px);
 }
 
 nav {
@@ -26,17 +35,22 @@ nav .hamb {
   background-repeat: no-repeat;
   height: 24px;
   width: 32px;
+  z-index: 1;
 }
 
 .hamb-menu-bg {
+  top: 0;
   position: fixed;
   width: 100vw;
   height: 100vh;
   background-color: rgb(0, 0, 0);
-  opacity: 0.7;
+  opacity: 0;
 }
 
 .hamb-menu {
+  top: 0;
+  transition: 0.1s ease-in;
+  opacity: 0;
   color: hsl(0deg, 0%, 41%);
   font-size: larger;
   margin: 0;
@@ -51,8 +65,8 @@ nav .hamb {
 .hamb-menu li {
   list-style-type: none;
 }
-.hamb-menu div {
-  height: 20px;
+.hamb-menu div:nth-child(3) {
+  height: 40px;
 }
 .hamb-menu .features-list,
 .hamb-menu .company-list {
@@ -76,8 +90,11 @@ nav .hamb {
 .hero {
   width: 100vw;
 }
-.hero img {
+.hero .mobile-img {
   width: 100%;
+}
+.hero .desktop-img {
+  display: none;
 }
 
 .main {
@@ -109,7 +126,6 @@ nav .hamb {
 .sponsors {
   margin-top: 50px;
   display: flex;
-  width: 100vw;
   justify-content: space-evenly;
   align-items: center;
 }
@@ -129,6 +145,7 @@ nav .hamb {
   margin-top: 60px;
   position: relative;
   bottom: 0;
+  z-index: -1;
 }
 .attribution a {
   text-decoration: none;
